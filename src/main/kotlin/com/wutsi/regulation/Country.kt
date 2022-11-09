@@ -8,7 +8,9 @@ class Country(
     val monetaryFormat: String,
     val dateFormat: String,
     val timeFormat: String,
-    val dateTimeFormat: String
+    val dateTimeFormat: String,
+    val supportsBusinessAccount: Boolean,
+    val supportsStore: Boolean
 ) {
     companion object {
         val CM = Country(
@@ -19,7 +21,9 @@ class Country(
             monetaryFormat = "#,###,##0 FCFA",
             dateFormat = "dd MMM yyy",
             timeFormat = "HH:mm",
-            dateTimeFormat = "dd MMM yyy, HH:mm"
+            dateTimeFormat = "dd MMM yyy, HH:mm",
+            supportsBusinessAccount = true,
+            supportsStore = true
         )
     }
 }

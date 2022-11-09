@@ -3,6 +3,7 @@ package com.wutsi.regulation
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
+import kotlin.test.assertTrue
 
 internal class CountryRegulationsTest {
     private val regulations = CountryRegulations()
@@ -24,6 +25,8 @@ internal class CountryRegulationsTest {
         assertEquals("dd MMM yyy", country.dateFormat)
         assertEquals("HH:mm", country.timeFormat)
         assertEquals("dd MMM yyy, HH:mm", country.dateTimeFormat)
+        assertTrue(country.supportsStore)
+        assertTrue(country.supportsBusinessAccount)
     }
 
     @Test
