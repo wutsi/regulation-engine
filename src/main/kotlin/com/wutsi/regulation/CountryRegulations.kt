@@ -1,6 +1,14 @@
 package com.wutsi.regulation
 
 class CountryRegulations {
+    private val countries = listOf(
+        Country.CM
+    )
+
     fun getSupportCountryCodes(): List<String> =
-        listOf("CM")
+        countries.map { it.code }
+
+    fun get(code: String): Country =
+        countries.find { it.code.equals(code, ignoreCase = true) }
+            ?: throw IllegalStateException("Country not supported: $code")
 }
