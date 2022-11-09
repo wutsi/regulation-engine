@@ -10,5 +10,5 @@ class CountryRegulations {
 
     fun get(code: String): Country =
         countries.find { it.code.equals(code, ignoreCase = true) }
-            ?: throw IllegalStateException("Country not supported: $code")
+            ?: throw CountryNotSupportedException("Country not supported: $code")
 }

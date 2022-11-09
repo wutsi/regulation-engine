@@ -31,7 +31,7 @@ internal class CountryRegulationsTest {
 
     @Test
     fun countryNotSupported() {
-        assertThrows<IllegalStateException> {
+        assertThrows<CountryNotSupportedException> {
             regulations.get("XX")
         }
     }
