@@ -5,17 +5,17 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import kotlin.test.assertTrue
 
-internal class CountryRegulationsTest {
-    private val regulations = CountryRegulations()
+internal class RegulationEngineTest {
+    private val engine = RegulationEngine()
 
     @Test
-    fun getSupportCountryCodes() {
-        assertEquals(listOf("CM"), regulations.getSupportCountryCodes())
+    fun supportedCountries() {
+        assertEquals(listOf("CM"), engine.supportedCountries())
     }
 
     @Test
-    fun cm() {
-        val country = regulations.get("CM")
+    fun countryCM() {
+        val country = engine.country("CM")
 
         assertEquals("CM", country.code)
         assertEquals("XAF", country.currency)
@@ -32,7 +32,22 @@ internal class CountryRegulationsTest {
     @Test
     fun countryNotSupported() {
         assertThrows<CountryNotSupportedException> {
-            regulations.get("XX")
+            engine.country("XX")
         }
+    }
+
+    @Test
+    fun supportedLanguages() {
+        assertEquals(listOf("en", "fr"), engine.supportedLanguages())
+    }
+
+    @Test
+    fun maxPictures() {
+        assertEquals(RegulationEngine.MAX_PICTURES, engine.maxPictures())
+    }
+
+    @Test
+    fun maxProducts() {
+        assertEquals(RegulationEngine.MAX_PRODUCTS, engine.maxProducts())
     }
 }
