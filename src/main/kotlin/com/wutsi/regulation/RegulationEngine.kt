@@ -2,7 +2,7 @@ package com.wutsi.regulation
 
 class RegulationEngine {
     companion object {
-        const val MAX_PRODUCTS = 100
+        const val MAX_PRODUCTS = 50
         const val MAX_PICTURES = 5
     }
 
