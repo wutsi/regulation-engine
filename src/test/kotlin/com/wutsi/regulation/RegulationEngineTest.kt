@@ -23,6 +23,7 @@ internal class RegulationEngineTest {
         assertEquals("#,###,##0 FCFA", country.monetaryFormat)
         assertEquals("FCFA", country.currencySymbol)
         assertEquals("dd MMM yyy", country.dateFormat)
+        assertEquals("dd MMM", country.dateFormatShort)
         assertEquals("HH:mm", country.timeFormat)
         assertEquals("dd MMM yyy, HH:mm", country.dateTimeFormat)
         assertTrue(country.supportsStore)
