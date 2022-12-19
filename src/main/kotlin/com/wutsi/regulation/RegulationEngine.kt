@@ -4,6 +4,7 @@ class RegulationEngine {
     companion object {
         const val MAX_PRODUCTS = 50
         const val MAX_PICTURES = 5
+        const val MAX_DIGITAL_DOWNLOAD_FILES = 5
     }
 
     private val countries = listOf(
@@ -23,4 +24,6 @@ class RegulationEngine {
     fun maxPictures() = MAX_PICTURES
 
     fun maxProducts() = MAX_PRODUCTS
+
+    fun maxDigitalDownloadFiles() = MAX_DIGITAL_DOWNLOAD_FILES
 }
