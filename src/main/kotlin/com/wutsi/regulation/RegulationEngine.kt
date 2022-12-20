@@ -8,7 +8,7 @@ class RegulationEngine {
     }
 
     private val countries = listOf(
-        Country.CM
+        Country.CM,
     )
 
     fun supportedLanguages(): List<String> =

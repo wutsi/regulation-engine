@@ -11,7 +11,7 @@ class Country(
     val timeFormat: String,
     val dateTimeFormat: String,
     val supportsBusinessAccount: Boolean,
-    val supportsStore: Boolean
+    val supportsStore: Boolean,
 ) {
     companion object {
         val CM = Country(
@@ -25,7 +25,7 @@ class Country(
             timeFormat = "HH:mm",
             dateTimeFormat = "dd MMM yyy, HH:mm",
             supportsBusinessAccount = true,
-            supportsStore = true
+            supportsStore = true,
         )
     }
 }
